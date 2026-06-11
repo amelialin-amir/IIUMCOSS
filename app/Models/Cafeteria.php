@@ -7,16 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Cafeteria extends Model
 {
     protected $fillable = [
-        'category_id',
         'cafeteria_name',
         'location',
-        'contact'
+        'status'
     ];
-
-    public function category()
-    {
-        return $this->belongsTo(Category::class);
-    }
 
     public function schedules()
     {

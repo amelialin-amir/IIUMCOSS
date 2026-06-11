@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Schedule;
 
 class ScheduleController extends Controller
 {
     public function index()
     {
-        return "Schedule Module Working";
+        $schedules = Schedule::with('cafeteria')->get();
+
+        return view('schedules', compact('schedules'));
     }
 }

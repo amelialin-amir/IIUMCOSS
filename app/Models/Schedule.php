@@ -10,8 +10,7 @@ class Schedule extends Model
         'cafeteria_id',
         'day',
         'open_time',
-        'close_time',
-        'status'
+        'close_time'
     ];
 
     public function cafeteria()

@@ -11,12 +11,12 @@ class CafeteriaController extends Controller
     {
         $search = $request->search;
 
-        $cafeterias = Cafeteria::where(
-            'cafeteria_name',
-            'LIKE',
-            "%{$search}%"
-        )->get();
+        $cafeterias = Cafeteria::when($search, function ($query) use ($search) {
+            $query->where('cafeteria_name', 'LIKE', "%{$search}%")
+                  ->orWhere('location', 'LIKE', "%{$search}%")
+                  ->orWhere('status', 'LIKE', "%{$search}%");
+        })->get();
 
-        return response()->json($cafeterias);
+        return view('cafeterias', compact('cafeterias', 'search'));
     }
 }
