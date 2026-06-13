@@ -1,63 +1,577 @@
-<<<<<<< HEAD
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# IIUM Cafeteria Operating Schedule System (IIUMCOSS)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Project Status
 
-## About Laravel
+This project is currently under development. The Cafeteria and Schedule module has been implemented. The authentication, administrator interface and Announcement module will be documented after the final modules have been completed and merged.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Group Information
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Course:** BIIT 2305 - Web Application Development
+**Section:** 04
+**Semester:** Semester 2, 2025/2026
+**Lecturer:** Asst. Prof. Dr. Nor Azura Binti Kamarulzaman
 
-## Learning Laravel
+### Group Members
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+| No. | Name                               | Matric Number |
+| --- | ---------------------------------- | ------------- |
+| 1   | Amelia Lin Binti Ahmad Amir Lin    | 2417640       |
+| 2   | Maisarah Basirah Binti Mohd Shukri | 2417854       |
+| 3   | Wardatun Nuha Binti Mohd Zamri     | 2415804       |
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## Project Overview
 
-## Agentic Development
+The IIUM Cafeteria Operating Schedule System, also known as IIUMCOSS, is a web-based application developed to help students at the International Islamic University Malaysia access cafeteria operating schedules and related announcements through a centralised platform.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+IIUM has many cafeteria outlets with different operating schedules. During public holidays, semester breaks and special occasions, students who remain on campus may not know which cafeterias are open or closed.
 
-```bash
-composer require laravel/boost --dev
+Currently, cafeteria schedule information is commonly distributed through WhatsApp groups, posters or one-off announcements. These announcements may easily be overlooked because students receive many messages through these channels. IIUMCOSS aims to make cafeteria information easier to find and access.
 
-php artisan boost:install
+---
+
+## Project Objectives
+
+The objectives of this project are:
+
+1. To develop a web application that displays cafeteria operating schedules accurately and in real time.
+2. To provide a centralised platform where students can access cafeteria schedule information.
+3. To reduce the possibility of students missing important cafeteria schedule updates and announcements.
+
+---
+
+## Target Users
+
+### Students
+
+Students can use the system to:
+
+* Search for cafeterias.
+* View cafeteria information.
+* Check cafeteria operating status.
+* View opening and closing schedules.
+* Access cafeteria notices and schedule updates.
+
+### Administrator
+
+The administrator is responsible for managing cafeteria announcements and updates through the system.
+
+---
+
+## Features and Functionalities
+
+### Student Features
+
+* View cafeteria information.
+* Search cafeterias by name, location or operating status.
+* View cafeteria opening and closing schedules.
+* Access cafeteria schedule information through a centralised web application.
+* View public holiday and special schedule updates.
+
+### Administrator Features
+
+The following administrator features are currently under development:
+
+* Administrator login and logout.
+* Add cafeteria announcements.
+* Edit cafeteria announcements.
+* Delete cafeteria announcements.
+* Upload images or posters for cafeteria notices.
+
+---
+
+## Current Module Implementation
+
+### Cafeteria Module
+
+The Cafeteria module allows the system to store and retrieve cafeteria information.
+
+Currently implemented functions include:
+
+* Display cafeteria records.
+* Search cafeterias by name.
+* Search cafeterias by location.
+* Search cafeterias by operating status.
+* Display cafeteria name, location and status.
+
+### Schedule Module
+
+The Schedule module stores the opening and closing schedule for each cafeteria.
+
+Currently implemented functions include:
+
+* Display cafeteria operating schedules.
+* Display operating day.
+* Display opening time.
+* Display closing time.
+* Connect each schedule record to its cafeteria.
+
+---
+
+## System Workflow
+
+### Student Workflow
+
+1. The student opens the web application.
+2. The student selects the Cafeterias or Schedules page.
+3. The system retrieves information from the database.
+4. The student enters a cafeteria name, location or status in the search field.
+5. The system displays the matching cafeteria records.
+6. The student can view the available operating schedules.
+
+### Administrator Workflow
+
+The administrator workflow will be updated after the authentication and Announcement modules have been completed.
+
+---
+
+## Technical Implementation
+
+### Technology Stack
+
+| Component                     | Technology                               |
+| ----------------------------- | ---------------------------------------- |
+| Backend framework             | Laravel 13                               |
+| Programming language          | PHP                                      |
+| Frontend                      | Laravel Blade, HTML and CSS              |
+| Database                      | MySQL                                    |
+| Database management           | phpMyAdmin                               |
+| Local development environment | XAMPP                                    |
+| Version control               | Git and GitHub                           |
+| Interface design              | Figma                                    |
+| Build tool                    | Vite                                     |
+| Authentication                | To be updated after final implementation |
+
+---
+
+## Database Design
+
+The current database contains tables for user accounts, cafeteria information and operating schedules.
+
+### Current Main Tables
+
+#### `users`
+
+Stores user account and authentication information.
+
+#### `cafeterias`
+
+Stores cafeteria information such as:
+
+* Cafeteria ID
+* Cafeteria name
+* Location
+* Operating status
+* Creation and update timestamps
+
+#### `schedules`
+
+Stores cafeteria operating schedule information such as:
+
+* Schedule ID
+* Cafeteria ID
+* Operating day
+* Opening time
+* Closing time
+* Creation and update timestamps
+
+Additional announcement-related tables will be added to this documentation after the Announcement module has been completed.
+
+---
+
+## Entity Relationship Diagram
+
+The final Entity Relationship Diagram will be inserted after all database migrations and models have been completed.
+
+Current relationship:
+
+```text
+Cafeteria 1 ─────────< Many Schedules
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+This means:
 
-## Contributing
+* One cafeteria can have many schedules.
+* Each schedule belongs to one cafeteria.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<!-- Add the final ERD image here later:
+![Entity Relationship Diagram](docs/images/erd.png)
+-->
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Laravel Components Implementation
 
-## Security Vulnerabilities
+### Routes
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+The following routes are currently implemented:
 
-## License
+```php
+Route::get('/', function () {
+    return view('welcome');
+});
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# IIUMCOSS
-IIUM Cafeteria Operating Schedule System (IIUMCOSS)
->>>>>>> e4d03d337aa8a8070b86b03e6d13042c1be23321
+Route::get('/cafeterias', [CafeteriaController::class, 'index']);
+
+Route::get('/schedules', [ScheduleController::class, 'index']);
+```
+
+The route list will be updated after the Authentication and Announcement modules have been merged.
+
+### Controllers
+
+#### `CafeteriaController`
+
+The `CafeteriaController` retrieves cafeteria records from the database. It also handles the search function using cafeteria name, location or operating status.
+
+#### `ScheduleController`
+
+The `ScheduleController` retrieves schedule records together with their related cafeteria information and sends the records to the schedule view.
+
+#### Other Controllers
+
+Authentication and Announcement controllers will be documented after their implementation has been completed.
+
+### Models and Relationships
+
+#### Cafeteria Model
+
+The Cafeteria model stores cafeteria information and defines its one-to-many relationship with schedules.
+
+```php
+public function schedules()
+{
+    return $this->hasMany(Schedule::class);
+}
+```
+
+#### Schedule Model
+
+The Schedule model stores operating schedule information. Each schedule belongs to one cafeteria.
+
+```php
+public function cafeteria()
+{
+    return $this->belongsTo(Cafeteria::class);
+}
+```
+
+### Views and User Interface
+
+The system uses Laravel Blade templates.
+
+Current views include:
+
+* `welcome.blade.php` — default landing page.
+* `mainpage.blade.php` — initial main page template.
+* `cafeterias.blade.php` — cafeteria list and search page.
+* `schedules.blade.php` — cafeteria operating schedule page.
+
+The current Cafeteria and Schedule pages use a turquoise, white and grey colour scheme. The final interface will be updated according to the Figma prototype.
+
+---
+
+## User Authentication System
+
+The authentication section will be updated after the authentication module has been completed and tested.
+
+The planned authentication functions include:
+
+* Administrator login.
+* Administrator logout.
+* Protected administrator pages.
+* Secure password hashing.
+* Session-based authentication.
+* CSRF protection for forms.
+
+Only functions that work in the final system will be retained in this section.
+
+---
+
+## Installation and Setup Instructions
+
+### Prerequisites
+
+Ensure the following software is installed:
+
+* PHP 8.4 or later
+* Composer
+* Node.js and NPM
+* XAMPP
+* MySQL
+* Git
+* A web browser such as Google Chrome or Microsoft Edge
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/amelialin-amir/IIUMCOSS.git
+cd IIUMCOSS
+```
+
+### Step 2: Install PHP Dependencies
+
+```bash
+composer install
+```
+
+### Step 3: Install Frontend Dependencies
+
+```bash
+npm install
+```
+
+### Step 4: Create the Environment File
+
+For Windows:
+
+```bash
+copy .env.example .env
+```
+
+### Step 5: Generate the Application Key
+
+```bash
+php artisan key:generate
+```
+
+### Step 6: Create the MySQL Database
+
+1. Open the XAMPP Control Panel.
+2. Start Apache and MySQL.
+3. Open phpMyAdmin.
+4. Create a database named:
+
+```text
+iiumcoss
+```
+
+### Step 7: Configure the Database Connection
+
+Open the `.env` file and update the database configuration:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=iiumcoss
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### Step 8: Run Database Migrations
+
+```bash
+php artisan migrate
+```
+
+### Step 9: Start the Frontend Development Server
+
+```bash
+npm run dev
+```
+
+### Step 10: Start the Laravel Server
+
+Open another terminal and run:
+
+```bash
+php artisan serve
+```
+
+Open the following address:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+## Usage Guide
+
+### Viewing Cafeterias
+
+1. Start the Laravel application.
+2. Open:
+
+```text
+http://127.0.0.1:8000/cafeterias
+```
+
+3. The system displays the cafeteria list.
+4. Enter a cafeteria name, location or status in the search box.
+5. Select the Search button.
+6. The system displays the matching cafeteria records.
+
+### Viewing Schedules
+
+1. Open:
+
+```text
+http://127.0.0.1:8000/schedules
+```
+
+2. The system displays the available cafeteria schedules.
+3. Each record shows the cafeteria name, operating day, opening time and closing time.
+
+### Administrator Usage
+
+The administrator usage guide will be added after the authentication and Announcement modules have been completed.
+
+---
+
+## Testing and Quality Assurance
+
+### Current Functionality Testing
+
+| Test                             | Expected Result                        | Current Status     |
+| -------------------------------- | -------------------------------------- | ------------------ |
+| Open Cafeterias page             | Cafeteria page is displayed            | Pass               |
+| Open Schedules page              | Schedule page is displayed             | Pass               |
+| Cafeteria route                  | CafeteriaController is called          | Pass               |
+| Schedule route                   | ScheduleController is called           | Pass               |
+| Display empty cafeteria table    | Empty-information message is displayed | Pass               |
+| Display empty schedule table     | Empty-information message is displayed | Pass               |
+| Search using real cafeteria data | Matching records are displayed         | Pending data entry |
+| Administrator login              | Administrator dashboard is displayed   | Pending            |
+| Add announcement                 | Announcement is saved                  | Pending            |
+| Edit announcement                | Announcement is updated                | Pending            |
+| Delete announcement              | Announcement is removed                | Pending            |
+
+### Browser Compatibility
+
+The current module has been tested using:
+
+* Google Chrome
+* Opera
+
+Final browser compatibility testing will be completed after all modules have been integrated.
+
+---
+
+## Challenges Faced and Solutions
+
+### Challenge 1: PHP Version Compatibility
+
+**Problem:** The Laravel project dependencies required a newer PHP version, while the existing development environment used PHP 8.2.
+
+**Solution:** PHP was updated to a compatible version. Required extensions such as OpenSSL, PDO MySQL and Fileinfo were also enabled in the PHP configuration.
+
+### Challenge 2: Database Configuration
+
+**Problem:** Laravel was initially configured to use SQLite instead of the MySQL database.
+
+**Solution:** The `.env` file was updated with the correct MySQL connection details, and the `iiumcoss` database was created through phpMyAdmin.
+
+### Challenge 3: Git and GitHub Collaboration
+
+**Problem:** Some group members had limited experience with cloning, pulling, committing and pushing changes through GitHub.
+
+**Solution:** The group used descriptive commit messages and pulled the latest code before starting new work.
+
+### Challenge 4: Connecting Models and Views
+
+**Problem:** The original controllers returned test text instead of retrieving and displaying database information.
+
+**Solution:** The controllers were updated to retrieve records through the Cafeteria and Schedule models and pass the data to Laravel Blade views.
+
+---
+
+## Future Improvements
+
+Possible future improvements include:
+
+* Real-time notifications for cafeteria schedule changes.
+* Cafeteria filtering by category or mahallah.
+* A mobile-friendly schedule calendar.
+* Email notifications for important announcements.
+* More detailed cafeteria information.
+* Automatic schedule updates during public holidays.
+* Improved responsive design for mobile devices.
+
+---
+
+## Learning Outcomes
+
+### Technical Skills
+
+The project has helped the group develop skills in:
+
+* Laravel Model-View-Controller architecture.
+* Laravel routes and controllers.
+* Eloquent models and relationships.
+* Database migrations.
+* MySQL database configuration.
+* Laravel Blade views.
+* Git and GitHub collaboration.
+* Troubleshooting PHP extensions and Laravel dependencies.
+
+### Soft Skills
+
+The project has also improved:
+
+* Teamwork.
+* Communication.
+* Task delegation.
+* Problem-solving.
+* Time management.
+* Technical documentation.
+
+---
+
+## Contributors
+
+### Amelia Lin Binti Ahmad Amir Lin
+
+Responsibilities:
+
+* Laravel project setup.
+* Database connection.
+* User authentication.
+* Homepage and user interface integration.
+* Navigation and application layout.
+
+### Maisarah Basirah Binti Mohd Shukri
+
+Responsibilities:
+
+* Cafeteria model and migration.
+* Schedule model and migration.
+* CafeteriaController.
+* ScheduleController.
+* Cafeteria and Schedule routes.
+* Cafeteria search function.
+* Cafeteria list view.
+* Schedule view.
+
+### Wardatun Nuha Binti Mohd Zamri
+
+Responsibilities:
+
+* Announcement model and migration.
+* Announcement CRUD operations.
+* AnnouncementController.
+* Administrator announcement views.
+* Image upload for cafeteria notices.
+
+---
+
+## Conclusion
+
+The IIUM Cafeteria Operating Schedule System aims to provide a centralised platform for students to access cafeteria schedules and announcements. The current Cafeteria and Schedule module demonstrates the implementation of Laravel models, migrations, controllers, routes, relationships and Blade views.
+
+The project also provides practical experience in developing a web application collaboratively using Git and GitHub. The conclusion will be updated after the Authentication and Announcement modules have been completed and integrated.
+
+---
+
+## References
+
+1. Laravel Documentation.
+2. PHP Documentation.
+3. MySQL Documentation.
+4. MDN Web Docs.
+5. Visual Paradigm. Sequence Diagram Guide.
+6. IIUM Cafeteria Operating Schedule System Group Project Part 1 Proposal.
